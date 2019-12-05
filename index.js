@@ -23,6 +23,10 @@ const io = socketIO(app);
 
 io.on('connection', (socket) => {
   console.log('Client connected');
+  
+  socket.on('chat message', function(msg){
+    io.emit('chat message', msg);
+  });
   socket.on('disconnect', () => console.log('Client disconnected'));
 });
 
