@@ -1,5 +1,5 @@
 var express = require('express')
-var app = express()
+//var app = express()
 var http = require('http').createServer(app);
 //var io = require('socket.io')(http);
 const router = express.Router();
@@ -8,25 +8,13 @@ const router = express.Router();
 //app.set('port', (process.env.PORT || 5000))
 //app.use(express.static(__dirname + '/public'))
 
-app.get('/', function(request, response) {
-  response.send('Hello World!')
-})
-
-app.get("/chat", function(req,res){
-  res.sendFile(path + "chat.html");
-})
-
-app.get("/index", function(req,res){
-  res.sendFile(path + "index.html");
-})
-
 const socketIO = require('socket.io');
 const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 const INDEX = path.join(__dirname, 'index.html');
 
-const server = express()
+const app = express()
   .use((req, res) => res.sendFile(INDEX) )
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
@@ -36,6 +24,19 @@ io.on('connection', (socket) => {
   console.log('Client connected');
   socket.on('disconnect', () => console.log('Client disconnected'));
 });
+
+//app.get('/', function(request, response) {
+  //response.send('Hello World!')
+//})
+
+app.get("/chat", function(req,res){
+  res.sendFile(path + "chat.html");
+})
+
+//app.get("/index", function(req,res){
+  //res.sendFile(path + "index.html");
+//})
+
 
 
 
