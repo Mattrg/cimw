@@ -26,17 +26,17 @@ io.on('connection', (socket) => {
   socket.on('disconnect', () => console.log('Client disconnected'));
 });
 
-//app.get('/', function(request, response) {
-  //response.send('Hello World!')
-//})
+app.get('/', function(request, response) {
+  response.send('Hello World!')
+})
 
 app.get("/chat", function(req,res){
   res.sendFile(path + "chat.html");
 })
 
-//app.get("/index", function(req,res){
-  //res.sendFile(path + "index.html");
-//})
+app.get("/index", function(req,res){
+  res.sendFile(path + "index.html");
+})
 
 
 
