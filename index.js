@@ -1,4 +1,7 @@
 var express = require('express')
+const socketIO = require('socket.io');
+const path = require('path');
+
 const PORT = process.env.PORT || 3000;
 const INDEX = path.join(__dirname, 'index.html');
 //var app = express()
@@ -12,9 +15,6 @@ const router = express.Router();
 
 //app.set('port', (process.env.PORT || 5000))
 //app.use(express.static(__dirname + '/public'))
-
-const socketIO = require('socket.io');
-const path = require('path');
 
 
 
