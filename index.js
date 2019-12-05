@@ -3,7 +3,7 @@ const socketIO = require('socket.io');
 const path = require('path');
 
 const PORT = process.env.PORT || 3000;
-const INDEX = path.join(__dirname, 'chat.html');
+const INDEX = path.join(__dirname, 'index.html');
 //var app = express()
 const app = express()
   .use((req, res) => res.sendFile(INDEX) )
@@ -23,12 +23,9 @@ const io = socketIO(app);
 
 io.on('connection', (socket) => {
   console.log('Client connected');
-  socket.on('chat message', function(msg){
-    console.log('message: ' + msg);
-  });
-  socket.on('chat message', function(msg){
-    io.emit('chat message', msg);
-  });
+  socket.on('press-key', payload => {
+    socket.broadcast.emit('press-key', payload)
+  })
   socket.on('disconnect', () => console.log('Client disconnected'));
 });
 
