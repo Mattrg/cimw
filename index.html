@@ -102,12 +102,6 @@
         else if(on && note === 49) triggerKeyPress('Db2')
         else if(on && note === 48) triggerKeyPress('C2')
 
-        socket.on('press-key', key => {
-          let note = notes[key]
-          let keyToPress = piano.keys.find(key => key.note === note)
-          piano.toggleKey(keyToPress.note)
-
-        })
     })
   </script>
 
