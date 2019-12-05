@@ -19,7 +19,7 @@ const INDEX = path.join(__dirname, 'index.html');
 
 
 
-const io = socketIO(server);
+const io = socketIO(app);
 
 io.on('connection', (socket) => {
   console.log('Client connected');
