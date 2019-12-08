@@ -16,7 +16,6 @@ io.on('connection', (socket) => {
   console.log('Client connected');
   socket.on('press-key', payload => {
     socket.broadcast.emit('press-key', payload)
-    console.log(payload)
     })
   socket.on('disconnect', () => console.log('Client disconnected'));
 });
