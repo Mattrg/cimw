@@ -4,21 +4,12 @@ const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 const INDEX = path.join(__dirname, 'index.html');
-//var app = express()
 const app = express()
   .use((req, res) => res.sendFile(INDEX) )
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
 var http = require('http').createServer(app);
-//var io = require('socket.io')(http);
 const router = express.Router();
-//const path = __dirname + '/'
-
-//app.set('port', (process.env.PORT || 5000))
-//app.use(express.static(__dirname + '/public'))
-
-
-
-
 const io = socketIO(app);
 
 io.on('connection', (socket) => {
@@ -40,8 +31,6 @@ io.on('connection', (socket) => {
 //app.get("/index", function(req,res){
   //res.sendFile(path + "index.html");
 //})
-
-
 
 
 //app.listen(app.get('port'), function() {
