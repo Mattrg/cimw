@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
-<div class= "examples" </div>
+<div class= "examples"></div>
 
   <head>
   
@@ -179,7 +179,7 @@
         socket.on('press-key', key => {
           let note = notes[key]
           let keyToPress = piano.keys.find(key => key.note === note)
-          piano.toggleKey(keyToPress.note)
+          piano.toggleKey(keyToPress.note, on)
         })    
         
       </script>
