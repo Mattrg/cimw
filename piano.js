@@ -1,11 +1,4 @@
 function myPiano(){
-const socket = io();
-var synth = new Tone.Synth().toMaster();
-var piano = new Nexus.Piano('#piano', {
-  'size': [1400,300],
-  'lowNote': 48,
-  'highNote': 96
-})
 
 const triggerKeyPress = note => {
   synth.triggerAttackRelease(note, '16n')
