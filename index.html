@@ -3,39 +3,52 @@
   <title>Collaborative Interactive Music Website</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" href="styles.css">
+  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+<div class= "examples" </div>
 
   <head>
-
+  
+  
     <style>
       body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
       .fa-anchor,.fa-coffee {font-size:200px}
-    
     </style>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://rawgit.com/nexus-js/ui/master/dist/NexusUI.js"></script>
     <script src="https://unpkg.com/tone"></script>
     <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
-  </head>
 
-  <body style="background-color:DodgerBlue;">
 
-    <!-- Navbar -->
-    <div class="top">
-      <div class="bar light-grey card left-align large">
-        <a class="bar-item button hide-medium hide-large right padding-large hover-white large red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="#" class="bar-item button padding-large white">Home</a>
-        
-      </div>
+  <body>
+	<header>
+	 <!-- Navbar -->
+    
+
+        <img src="./26304.png" >
+		<nav>
+			<ul class="nav__links">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Login</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</nav>
+			<a class="cta" href="#"><button>Contact</button></a>
+      
+  </header>
+   
 
       <!-- Navbar on small screens -->
       <div id="navDemo" class="bar-block white hide hide-large hide-medium large">
-      
+      <img src="piano_icon.png" >
       </div>
     </div>
 
@@ -49,7 +62,6 @@
         var synth = new Tone.Synth().toMaster();
         var piano = new Nexus.Piano('#piano', {
           'size': [1400,300],
-          'mode': 'button',
           'lowNote': 48,
           'highNote': 96
         })
