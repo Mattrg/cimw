@@ -1,4 +1,4 @@
-
+function myPiano(){
 const socket = io();
 var synth = new Tone.Synth().toMaster();
 var piano = new Nexus.Piano('#piano', {
@@ -123,3 +123,4 @@ socket.on('press-key', key => {
   piano.toggleKey(keyToPress.note)
 })    
 
+}
