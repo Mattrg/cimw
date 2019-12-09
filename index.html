@@ -111,6 +111,7 @@
         var synth = new Tone.Synth().toMaster();
         var piano = new Nexus.Piano('#piano', {
           'size': [1400,300],
+          'mode':'button',
           'lowNote': 48,
           'highNote': 96
         })
@@ -229,9 +230,7 @@
         socket.on('press-key', key => {
           let note = notes[key]
           let keyToPress = piano.keys.find(key => key.note === note)
-          piano.toggleKey(keyToPress.note)
-          setTimeout(function(){piano.toggleKey(off)},1000)
-          console.log(key)
+          piano.toggleKey(keyToPress.note, off)
         })    
         
       </script>
