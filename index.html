@@ -11,7 +11,6 @@
   
 <!-- <div class= "examples"></div> -->
 
-  <!-- <head> -->
     <style>	
 		li, a, button {
 			font-family: "Montserrat", sans-serif;
@@ -81,21 +80,19 @@
 </head>
 
   <body>
-	<header class="kylioli">
-	 <!-- Navbar -->
-        <img src="26304.png" >
-		<nav>
-			<ul class="nav__links">
-				<li><a href="index.css">Home</a></li>
-				
-				<li><a href="index.css">About</a></li>
-			</ul>
-		</nav>
-			<a class="cta" href="index.css"><button>Contact</button></a>
-      
-	</header>
-   
-
+      <header class="kylioli">
+          <!-- Navbar -->
+               <img src="26304.png" >
+           <nav>
+             <ul class="nav__links">
+               <li><a href="index.css">Home</a></li>
+               
+               <li><a href="index.css">About</a></li>
+             </ul>
+           </nav>
+             <a class="cta" href="index.css"><button>Contact</button></a>
+             
+         </header>
       <!-- Navbar on small screens -->
       <div id="navDemo" class="bar-block white hide hide-large hide-medium large">
       <img src="piano_icon.png" >
@@ -229,8 +226,7 @@
         socket.on('press-key', key => {
           let note = notes[key]
           let keyToPress = piano.keys.find(key => key.note === note)
-          piano.toggleKey(keyToPress.note)
-          piano.toggleKey(off)
+          piano.toggleKey(keyToPress.note, off)
           console.log(key)
         })    
         
