@@ -19,7 +19,7 @@
 			color: #edf0f1;
 			text-decoration: none;
 		}
-		header{
+		.kylioli{
 			display: flex;
 			justify-content:space-between;
 			align-items:center;
@@ -40,6 +40,36 @@
 			padding: 0;
 			background-color: #24252A;
 		}
+		.logo{
+			cursor: pointer;
+			}
+		.nav__links {
+			list-style: none;
+		}
+		.nav__links li {
+			display: inline-block;
+			padding: 0px 20px;
+		}
+		.nav__links a {
+			transition: all 0.3s ease 0s;
+		}
+		
+		.nav__links li a:hover {
+			color: #0088a9;
+		}
+		
+		button {
+			padding: 10px 25 px;
+			background-color: rgba(0,136,169,1);
+			border: none;
+			border-radius: 110px;
+			cursor: pointer;
+			transition: all 0.3s ease 0s;
+		}
+		button:hover {
+			background-color: rgba(0,136,169,0);
+		}
+		
     </style>
 
     <script src="/socket.io/socket.io.js"></script>
@@ -49,19 +79,19 @@
 
 
   <body>
-	<header>
+	<header class="kylioli">
 	 <!-- Navbar -->
         <img src="./26304.png" >
 		<nav>
 			<ul class="nav__links">
 				<li><a href="#">Home</a></li>
-				<li><a href="#">Login</a></li>
+				
 				<li><a href="#">About</a></li>
 			</ul>
 		</nav>
 			<a class="cta" href="#"><button>Contact</button></a>
       
-  </header>
+	</header>
    
 
       <!-- Navbar on small screens -->
