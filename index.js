@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
     })
   socket.on('disconnect', () => console.log('Client disconnected'));
 });
-
+module.exports = require('./lib/ejs');
 //app.get('/', function(request, response) {
   //response.send('Hello World!')
 //})
