@@ -8,73 +8,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-<!-- <div class= "examples"></div> -->
-    <style>	
-		li, a, button {
-			font-family: "Montserrat", sans-serif;
-			font-weight: 500;
-			font-size: 16px;
-			color: #edf0f1;
-			text-decoration: none;
-		}
-		.kylioli{
-			display: flex;
-			justify-content:space-between;
-			align-items:center;
-			padding: 11px 0.5%;
-		}  
-		body,h1,h2,h3,h4,h5,h6 {
-			font-family: "Lato", sans-serif
-			}
-      .w3-bar,h1,button {
-			font-family: "Montserrat", sans-serif
-			}
-      .fa-anchor,.fa-coffee {
-			font-size:200px
-			}
-		*{
-		box-sizing: border-box;
-			margin: 0;
-			padding: 0;
-			background-color: #24252A;
-		}
-		.logo{
-			cursor: pointer;
-			}
-		.nav__links {
-			list-style: none;
-		}
-		.nav__links li {
-			display: inline-block;
-			padding: 0px 20px;
-		}
-		.nav__links a {
-			transition: all 0.3s ease 0s;
-		}
-		
-		.nav__links li a:hover {
-			color: #0088a9;
-		}
-		
-		button {
-			padding: 10px 25 px;
-			background-color: rgba(0,136,169,1);
-			border: none;
-			border-radius: 110px;
-			cursor: pointer;
-			transition: all 0.3s ease 0s;
-		}
-		button:hover {
-			background-color: rgba(0,136,169,0);
-		}
-		
-    </style>
-
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="https://rawgit.com/nexus-js/ui/master/dist/NexusUI.js"></script>
-    <script src="https://unpkg.com/tone"></script>
-    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://rawgit.com/nexus-js/ui/master/dist/NexusUI.js"></script>
+  <script src="https://unpkg.com/tone"></script>
+  <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
 
 </head>
 
@@ -107,7 +44,6 @@
         var synth = new Tone.Synth().toMaster();
         var piano = new Nexus.Piano('#piano', {
           'size': [1400,300],
-          'mode':'button',
           'lowNote': 48,
           'highNote': 96
         })
