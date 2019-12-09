@@ -79,7 +79,7 @@
 
 </head>
 
-  <body>
+	<body style="background-color:DodgerBlue;">
       <header class="kylioli">
           <!-- Navbar -->
                <img src="26304.png" >
@@ -226,7 +226,8 @@
         socket.on('press-key', key => {
           let note = notes[key]
           let keyToPress = piano.keys.find(key => key.note === note)
-          piano.toggleKey(keyToPress.note, off)
+          piano.toggleKey(keyToPress.note)
+          setTimeout(function(){piano.toggleKey(off)},1000)
           console.log(key)
         })    
         
