@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
   <title>Collaborative Interactive Music Website</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,24 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
-<div class= "examples"></div>
-
-  <head>
-  
- <header class="kylioli">
-	 <!-- Navbar -->
-        <img src="26304.png" >
-		<nav>
-			<ul class="nav__links">
-				<li><a href="index.css">Home</a></li>
-				
-				<li><a href="index.css">About</a></li>
-			</ul>
-		</nav>
-			<a class="cta" href="index.css"><button>Contact</button></a>
-      
-	</header>
-	
+<!-- <div class= "examples"></div> -->
     <style>	
 		li, a, button {
 			font-family: "Montserrat", sans-serif;
@@ -91,18 +75,30 @@
     <script src="https://rawgit.com/nexus-js/ui/master/dist/NexusUI.js"></script>
     <script src="https://unpkg.com/tone"></script>
     <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
-	<body style="background-color:DodgerBlue;">
+
 </head>
+
   <body>
-	
+      <header class="kylioli">
+          <!-- Navbar -->
+               <img src="26304.png" >
+           <nav>
+             <ul class="nav__links">
+               <li><a href="index.css">Home</a></li>
+               
+               <li><a href="index.css">About</a></li>
+             </ul>
+           </nav>
+             <a class="cta" href="index.css"><button>Contact</button></a>
+             
+         </header>
       <!-- Navbar on small screens -->
       <div id="navDemo" class="bar-block white hide hide-large hide-medium large">
       <img src="piano_icon.png" >
       </div>
-    </div>
 
     <!-- Header -->
-    <header class="container padding-10 center blue center" style="padding:128px 16px">
+    <div class="container padding-10 center blue center" style="padding:128px 16px">
       <h1 class="margin jumbo">Virtual Piano</h1>
       <div id='piano'></div>
 
@@ -231,13 +227,14 @@
           let note = notes[key]
           let keyToPress = piano.keys.find(key => key.note === note)
           piano.toggleKey(keyToPress.note, off)
+          console.log(key)
         })    
         
       </script>
 
       <p class="xlarge"></p>
       
-    </header>
+    </div>
 
     <div class="container black center opacity padding-16">
         <h1 class="margin large">User 1</h1> 
