@@ -18,6 +18,20 @@
           .container:after,.container:before,.panel:after,.panel:before,.row:after,.row:before,.row-padding:after,.row-padding:before,
           .cell-row:before,.cell-row:after,.clear:after,.clear:before,.bar:before,.bar:after{content:"";display:table;clear:both}
           .col,.half,.third,.twothird,.threequarter,.quarter{float:left;width:100%}
+
+        header {
+          background-color: #666;
+          padding: 30px;
+          text-align: center;
+          font-size: 35px;
+          color: white;
+}
+        section:after {
+          content: "";
+          display: table;
+          clear: both;
+}
+
 </style>
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://rawgit.com/nexus-js/ui/master/dist/NexusUI.js"></script>
@@ -29,7 +43,7 @@
   <body style="background-color:#ff69b4;">
       
       <!-- Navbar on small screens -->
-      <div class="top">
+      <header>
           <div class="bar light-grey card left-align large">
             <a class="bar-item button hide-medium hide-large right padding-large hover-white large red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
             <a href="#" class="bar-item button padding-large white">Home</a>
@@ -42,9 +56,9 @@
           <div id="navDemo" class="bar-block white hide hide-large hide-medium large">
           
           </div>
-        </div>
+        </header>
     <!-- Header -->
-    <header class="container padding-10 center blue center" style="padding:96px 16px">
+    <section class="container padding-10 center blue center" style="padding:96px 16px">
       <h1 class="margin jumbo">Virtual Piano</h1>
       <div id='piano'></div>
 
@@ -179,7 +193,7 @@
 
       <p class="large"></p>
       
-    </header>
+    </section>
 
     <div class="container black center opacity padding-16">
         <h1 class="margin large">User 1</h1> 
