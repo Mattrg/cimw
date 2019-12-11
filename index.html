@@ -22,7 +22,7 @@
         header {
           background-color: #666;
           padding: 45px;
-          text-align: center;
+          text-align: left;
           font-size: 20px;
           color: white;
           }
@@ -32,7 +32,12 @@
           clear: both;
           }
         .bar {float: top left;}
-
+          footer {background-color: #666;
+          padding: 45px;
+          text-align: left;
+          font-size: 20px;
+          color: white;
+          }
 </style>
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://rawgit.com/nexus-js/ui/master/dist/NexusUI.js"></script>
@@ -59,7 +64,7 @@
           </div>
         </header>
     <!-- Header -->
-    <section class="container padding-10 center blue center" style="padding:96px 16px">
+    <section class="container padding-20 center blue center" style="padding:96px 16px">
       <h1 class="margin jumbo">Virtual Piano</h1>
       <div id='piano'></div>
 
@@ -196,12 +201,11 @@
       
     </section>
 
-    <div class="container black center opacity padding-16">
-        <h1 class="margin large">User 1</h1> 
-    </div>
-
     <!-- Footer -->
     <footer class="container padding-16 center white opacity">  
+        <div class="container black center opacity padding-16">
+            <h1 class="margin large">User 1</h1> 
+        </div>
       <div class="large padding-16">
         <i class="fa fa-facebook-official hover-opacity"></i>
         <i class="fa fa-instagram hover-opacity"></i>
