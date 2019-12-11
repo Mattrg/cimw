@@ -136,7 +136,7 @@
                 //create a synth and connect it to the master output (your speakers)
                 //var synth = new Tone.Synth().toMaster()
 
-                switch (key) {
+               /* switch (key) {
 
                     // WHITE PIANO KEYS (RIGHT to LEFT)
                     case 'a':
@@ -204,7 +204,7 @@
                     default:
                         break;
                 }
-            });
+            });*/
 
 
 
@@ -214,9 +214,9 @@
             piano.on('change', event => {
                 let note = event.note,
                     on = event.state
-                if (on && note === 96) triggerKeyPress('C6')
-                else if (on && note === 95) triggerKeyPress('B5')
-                else if (on && note === 94) triggerKeyPress('Bb5')
+                if (on && note === 96 && key == 'l') triggerKeyPress('C6')
+                else if (on && note === 95 && key == 'k') triggerKeyPress('B5')
+                else if (on && note === 94 && key == 'p') triggerKeyPress('Bb5')
                 else if (on && note === 93) triggerKeyPress('A5')
                 else if (on && note === 92) triggerKeyPress('Ab5')
                 else if (on && note === 91) triggerKeyPress('G5')
@@ -264,7 +264,7 @@
                 else if (on && note === 49) triggerKeyPress('Db2')
                 else if (on && note === 48) triggerKeyPress('C2')
             })
-
+          });
             const notes = {
                 'C6': 96,
                 'B5': 95,
