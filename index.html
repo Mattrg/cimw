@@ -123,7 +123,7 @@
 
             const triggerKeyPress = note => {
                 synth.triggerAttackRelease(note, '16n')
-                socket.broadcast.emit('press-key', note)
+                socket.emit('press-key', note)
             }
 
 
