@@ -99,6 +99,81 @@
           'lowNote': 48,
           'highNote': 96
         })
+                // ACTIVATE KEYPRESSES FOR USING KEYBOARD 
+                document.addEventListener('keydown', function(event) {
+            if (event.defaultPrevented) {
+                return;
+            }
+            var key = event.key || event.keyCode;
+            //create a synth and connect it to the master output (your speakers)
+            var synth = new Tone.Synth().toMaster()
+            switch (key) {
+                // WHITE PIANO KEYS (RIGHT to LEFT)
+                case 'a':
+                    return triggerKeyPress('F4');
+                    break;
+                case 's':
+                    return triggerKeyPress('G4');
+                    break;
+                case 'd':
+                    return triggerKeyPress('A4');
+                    break;
+                case 'f':
+                    return triggerKeyPress('B4');
+                    break;
+                case 'g':
+                    return triggerKeyPress('C5');
+                    break;
+                case 'h':
+                    return triggerKeyPress('D5');
+                    break;
+                case 'j':
+                    return triggerKeyPress('E5');
+                    break;
+                case 'k':
+                    return triggerKeyPress('F5');
+                    break;
+                case 'l':
+                    return triggerKeyPress('G5');
+                    break;
+                case ';':
+                    return triggerKeyPress('A5');
+                    break;
+                case '':
+                    return triggerKeyPress('B5');
+                    break;
+                case 'Enter':
+                    return triggerKeyPress('C6');
+                    break;
+                    //BLACK PIANO KEYS (RIGHT to LEFT)
+                case 'w':
+                    return triggerKeyPress('Gb4');
+                    break;
+                case 'e':
+                    return triggerKeyPress('Ab4');
+                    break;
+                case 'r':
+                    return triggerKeyPress('Bb4');
+                    break;
+                case 't':
+                    return triggerKeyPress('Db5');
+                    break;
+                case 'y':
+                    return triggerKeyPress('Eb5');
+                    break;
+                case 'i':
+                    return triggerKeyPress('Gb5');
+                    break;
+                case 'o':
+                    return triggerKeyPress('Ab5');
+                    break;
+                case 'p':
+                    return triggerKeyPress('Bb5');
+                    break;
+                default:
+                    break;
+            }
+        });
 
         const triggerKeyPress = note => {
           synth.triggerAttackRelease(note, '16n')
