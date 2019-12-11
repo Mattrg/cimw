@@ -122,7 +122,7 @@
             })
 
             const triggerKeyPress = note => {
-                synth.triggerAttackRelease(note, '16n')
+                //synth.triggerAttackRelease(note, '16n')
                 socket.emit('press-key', note)
             }
 
